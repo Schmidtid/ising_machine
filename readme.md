@@ -40,10 +40,10 @@ You can read more about unbalanced penalization [here](https://arxiv.org/pdf/221
 You can also express the formulation in the terms of the Ising Hamiltonian
 
 ```
-import ising_machine as im
+>>> import ising_machine as im
 >>> J = im.load_graph('ising_machine/data/G18.txt')
 >>> simulator = im.Solver(J, h=None, values='spin')
->>> x = simulator.mzm_ising(min_eigv=13)
+>>> x = simulator.mzm_ising()
 >>> print(x)
 [1. 1. -1. ... 1. -1. 1.]
 ```
