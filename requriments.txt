@@ -1,0 +1,8 @@
+dwave-neal
+dwave-tabu
+docplex
+pyscipopt
+torch
+matplotlib
+tqdm
+scipy
