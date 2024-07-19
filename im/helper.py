@@ -226,8 +226,13 @@ class Solver:
         x_shaped = x_white * S
         return np.fft.irfft(x_shaped)
 
-    def _obj(self,x=None):
+    def get_obj(self,
+                x: np.ndarray = None):
         """
+        Parameters
+        ----------
+            x (np.ndarray, optional): solution binary vector
+
         Returns
         ----------
             float: QUBO energy value
