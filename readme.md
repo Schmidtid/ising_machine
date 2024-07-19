@@ -15,11 +15,11 @@ import ising_machine as im
 g = im.load_graph('ising_machine/data/be150.3.8.sparse', ut=True)
 simulator = Solver(g)
 x = simulator.mzm_ising() # Ising machine based on Mach-Zender modulator
-simulator._obj() # print QUBO and Ising energy
+simulator.get_obj() # print QUBO and Ising energy
 x_0 = simulator.clip_fb(min_eigv=13, h_max=1) for problem with big coefficient
-simulator._obj()
+simulator.get_obj()
 x_1 = simulator.simulated_annealing() # some heuristic algorithm
-simulator._obj()
+simulator.get_obj()
 ```
 
 Problems can also be imported from a `.lp` or `.mps` file and solved using CPLEX/SCIP.
